@@ -20,8 +20,8 @@ import Data.Text.Lazy.Encoding (decodeUtf8)
 import System.Environment
 
 data Menu = Menu { idMenu :: Maybe Int, name :: Maybe String, description :: Maybe String, price :: Maybe Int, restaurant :: Maybe Int } deriving (Show,Generic)
-instance  ToJson Menu
-instance FromJson Menu
+instance  ToJSON Menu
+instance FromJSON Menu
 matchesId :: Int -> Menu -> Bool
 matchesId id menu = case idMenu menu of
         Nothing -> False
